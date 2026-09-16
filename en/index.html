@@ -9,6 +9,7 @@
   <style>
     * { box-sizing: border-box; }
     html, body { margin: 0; background: #191b1f; }
+    html { scroll-behavior: smooth; }
     body { font-family: 'Work Sans', system-ui, sans-serif; background: #191b1f; color: #e9eaec; min-height: 100%; }
     a { color: #c9a35f; text-decoration: none; }
     a:hover { color: #ffffff; }
@@ -37,9 +38,10 @@
       padding: 26px 56px; border-bottom: 1px solid rgba(255,255,255,0.07);
       background: rgba(25,27,31,0.9); backdrop-filter: blur(6px);
     }
-    .navlinks { display: flex; gap: 34px; }
+    .navlinks { display: flex; align-items: center; gap: 34px; }
     .navlinks a { font-size: 13.5px; color: #9a9ea3; }
     .navlinks a:hover { color: #e9eaec; }
+    .navlinks .nav-home { display: flex; }
     .lang-switch { display: flex; align-items: center; gap: 8px; font-size: 12.5px; margin-left: 34px; padding-left: 34px; border-left: 1px solid rgba(255,255,255,0.12); }
     .lang-switch a { color: #9a9ea3; }
     .lang-switch a:hover { color: #e9eaec; }
@@ -112,6 +114,9 @@
 
   <nav>
     <div class="navlinks">
+      <a href="#top" class="nav-home" aria-label="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M9.5 20v-6h5v6"/></svg>
+      </a>
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#project">Projects</a>
@@ -124,7 +129,7 @@
     </div>
   </nav>
 
-  <header class="hero">
+  <header class="hero" id="top">
     <div class="hero-grid">
       <div>
         <p class="eyebrow">Software Engineer · Video Games</p>
@@ -165,7 +170,7 @@
     <div class="section-inner">
       <div class="about-grid">
         <div>
-          <h2 class="section-title">Profile</h2>
+          <h2 class="section-title">About</h2>
           <p class="about-text">Software engineer with fairly varied experience, centered on video games and imaging. Skilled in C#, WPF, C++, Python and software design, with over 7 years practicing Agile and Scrum methodologies. Invested in working with AI (workflows, tools...) since late 2025. Computer science engineering degree from ESIEA.</p>
         </div>
         <div class="stat-list">
